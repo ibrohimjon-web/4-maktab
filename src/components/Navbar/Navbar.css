@@ -1,0 +1,111 @@
+/* Asosiy Navbar uslubi */
+.navbar-wrapper {
+  background-color: #0044cc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Navbarni doimiy qilish */
+  top: -100px; /* Boshlanishda yuqorida yashirish */
+  width: 100%;
+  transition: top 0.5s ease-in-out; /* Animatsiya */
+  z-index: 1000; /* Navbarni yuqorida ko'rsatish uchun */
+}
+
+/* .show klassi faollashganda, navbar pastga tushadi */
+.navbar-wrapper.show {
+  top: 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.Logo {
+  width: auto;
+  height: 60px;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transition: transform 0.3s ease-out;
+}
+
+/* Nav linklarini uslubi */
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffdd00; /* Hoverda rang o'zgaradi */
+}
+
+/* Bars (Gamburger) ikonkasi */
+.bars-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Media Queries: 1200px va undan kichik ekranlar uchun */
+@media (max-width: 1200px) {
+  .bars-icon {
+      display: block; /* Menyu ikonkasini kichik ekranlarda ko'rsatish */
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #0044cc;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 250px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+  }
+
+  .nav-links li a {
+      font-size: 18px;
+  }
+}
+
+/* Qo'shimcha kichik ekranlar uchun */
+@media (max-width: 600px) {
+  .logo a {
+      font-size: 24px;
+  }
+
+  .bars-icon {
+      font-size: 24px;
+  }
+
+  .nav-links li a {
+      font-size: 16px;
+  }
+}

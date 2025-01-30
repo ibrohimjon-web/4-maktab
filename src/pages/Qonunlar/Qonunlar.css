@@ -1,0 +1,95 @@
+/* Asosiy uslubi */
+.laws-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 1s forwards;
+}
+
+/* Animatsiya: Sahifa yuklanishi bilan yuqoridan pastga ko'tarilish */
+@keyframes slideIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.laws-title {
+  text-align: center;
+  font-size: 36px;
+  color: #002b80;
+  margin-bottom: 30px;
+}
+
+.laws-description {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.laws-list {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.laws-list h3 {
+  font-size: 20px;
+  color: #ff5e00;
+  margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+.laws-list h3:hover {
+  color: #d45700; /* Hover effekti */
+}
+
+.laws-list p {
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.laws-list p:hover {
+  color: #0056b3; /* Hover effekti */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .laws-title {
+      font-size: 28px;
+  }
+
+  .laws-description {
+      font-size: 16px;
+  }
+
+  .laws-list h3 {
+      font-size: 18px;
+  }
+
+  .laws-list p {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .laws-title {
+      font-size: 24px;
+  }
+
+  .laws-description {
+      font-size: 14px;
+  }
+
+  .laws-list h3 {
+      font-size: 16px;
+  }
+
+  .laws-list p {
+      font-size: 12px;
+  }
+}

@@ -1,0 +1,119 @@
+/* Asosiy uslubi */
+.contact-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1s forwards;
+}
+
+/* Animatsiya: Formaning yuqoridan pastga ko'tarilishi */
+@keyframes slideUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 26px;
+  color: #002b80;
+  margin-bottom: 10px;
+}
+
+.contact-description {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fokusda bo'lganda animatsiya */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.3);
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effekti */
+.submit-button:hover {
+  background-color: #004494;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .contact-title {
+      font-size: 22px;
+  }
+
+  .contact-description {
+      font-size: 14px;
+  }
+
+  .submit-button {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-wrapper {
+      padding: 15px;
+  }
+
+  .contact-title {
+      font-size: 20px;
+  }
+
+  .contact-description {
+      font-size: 12px;
+  }
+
+  .submit-button {
+      font-size: 12px;
+      padding: 6px 12px;
+  }
+}

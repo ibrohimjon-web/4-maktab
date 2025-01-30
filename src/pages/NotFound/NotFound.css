@@ -1,0 +1,41 @@
+/* Container styles */
+.not-found-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  /* Heading styles */
+  .not-found-container h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #3b82f6; /* blue-600 */
+  }
+  
+  /* Paragraph styles */
+  .not-found-container p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #4b5563; /* gray-700 */
+  }
+  
+  .not-found-container p:last-of-type {
+    margin-top: 0.5rem;
+    color: #6b7280; /* gray-500 */
+  }
+  
+  /* Link styles */
+  .not-found-container a {
+    margin-top: 1rem;
+    color: #3b82f6; /* blue-600 */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .not-found-container a:hover {
+    color: #2563eb; /* blue-700 */
+  }
+  

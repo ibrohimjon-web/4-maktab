@@ -1,0 +1,100 @@
+/* Asosiy uslubi */
+.events-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s forwards;
+}
+
+/* Animatsiya: Sahifa yuklanishida asta-sekin ko'rinishni oshirish */
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.events-title {
+  text-align: center;
+  font-size: 36px;
+  color: #002b80;
+  margin-bottom: 30px;
+}
+
+.events-description {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.events-list {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.event {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effekti */
+.event:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.event h3 {
+  font-size: 20px;
+  color: #ff5e00;
+  margin-bottom: 10px;
+}
+
+.event p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .events-title {
+      font-size: 28px;
+  }
+
+  .events-description {
+      font-size: 16px;
+  }
+
+  .event h3 {
+      font-size: 18px;
+  }
+
+  .event p {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-title {
+      font-size: 24px;
+  }
+
+  .events-description {
+      font-size: 14px;
+  }
+
+  .event h3 {
+      font-size: 16px;
+  }
+
+  .event p {
+      font-size: 12px;
+  }
+}

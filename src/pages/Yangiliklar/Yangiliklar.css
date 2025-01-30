@@ -1,0 +1,101 @@
+/* Asosiy uslubi */
+.news-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s forwards;
+}
+
+/* Animatsiya: Sahifa yuklanishida asta-sekin ko'rinishni oshirish */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.news-item img {
+  width: 70%;
+  height: auto;
+  margin: 5px auto 15px auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.news-title {
+  text-align: center;
+  font-size: 36px;
+  color: #002b80;
+  margin-bottom: 30px;
+}
+
+.news-content {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.news-item {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effekti */
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.news-item h3 {
+  font-size: 20px;
+  color: #ff5e00;
+  margin-bottom: 10px;
+}
+
+.news-item p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .news-title {
+    font-size: 28px;
+  }
+
+  .news-item h3 {
+    font-size: 18px;
+  }
+
+  .news-item p {
+    font-size: 14px;
+  }
+
+  .news-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-title {
+    font-size: 24px;
+  }
+
+  .news-item h3 {
+    font-size: 16px;
+  }
+
+  .news-item p {
+    font-size: 12px;
+  }
+}

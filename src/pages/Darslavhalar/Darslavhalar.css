@@ -1,0 +1,117 @@
+/* Asosiy uslubi */
+.lessons-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1s forwards;
+}
+
+/* Animatsiya: Sahifa yuklanishi bilan yuqoridan pastga ko'tarilish */
+@keyframes slideUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.lessons-title {
+  text-align: center;
+  font-size: 28px;
+  color: #002b80;
+  margin-bottom: 10px;
+}
+
+.lessons-description {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.lessons-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.lesson-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+/* Animatsiya: Har bir kartochka sahifa yuklanganda pastdan yuqoriga ko'tariladi */
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.lesson-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.lesson-image {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  display: block;
+}
+
+.lesson-caption {
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .lessons-title {
+      font-size: 24px;
+  }
+
+  .lessons-description {
+      font-size: 14px;
+  }
+
+  .lessons-gallery {
+      gap: 10px;
+  }
+
+  .lesson-card {
+      width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .lessons-title {
+      font-size: 20px;
+  }
+
+  .lessons-description {
+      font-size: 12px;
+  }
+
+  .lesson-card {
+      width: 100%;
+  }
+
+  .lesson-caption {
+      font-size: 12px;
+  }
+}

@@ -1,0 +1,141 @@
+/* Asosiy footer uslubi */
+.footer-wrapper {
+  background-color: #002b80;
+  color: white;
+  padding: 40px 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: footerAppear 1s forwards; /* Animatsiya qo'shildi */
+}
+
+/* Animatsiya: footer pastga tushadi */
+@keyframes footerAppear {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffdd00;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Ijtimoiy tarmoqlar uslubi */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: socialIconsAppear 1s forwards 1s; /* Animatsiya qo'shildi, 1s kechikish bilan */
+}
+
+@keyframes socialIconsAppear {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.social-link {
+  color: white;
+  font-size: 18px;
+  background-color: #0044cc;
+  padding: 15px;
+  text-align: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #ffdd00;
+  color: #002b80;
+  transform: scale(1.1);
+}
+
+/* Footer pastki qismi */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid #ffffff30;
+  padding-top: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: footerBottomAppear 1s forwards 1.5s; /* Animatsiya qo'shildi, 1.5s kechikish bilan */
+}
+
+@keyframes footerBottomAppear {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.dasturchi {
+  margin-top: 20px;
+  line-height: 2;
+  font-size: 20px;
+  color: rgb(218, 253, 17);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dasturchi:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-section {
+      margin-bottom: 20px;
+  }
+
+  .social-icons {
+      justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section h4 {
+      font-size: 16px;
+  }
+
+  .footer-section p {
+      font-size: 12px;
+  }
+
+  .social-link {
+      font-size: 16px;
+      padding: 8px;
+  }
+
+  .footer-bottom {
+      font-size: 12px;
+  }
+}

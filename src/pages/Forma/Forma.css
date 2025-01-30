@@ -1,0 +1,118 @@
+/* Asosiy uslubi */
+.uniform-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideIn 1s forwards;
+}
+
+/* Animatsiya: Sahifa yuklanishi bilan yuqoridan pastga ko'tarilish */
+@keyframes slideIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.uniform-title {
+  text-align: center;
+  font-size: 28px;
+  color: #002b80;
+  margin-bottom: 10px;
+}
+
+.uniform-description {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.uniform-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.uniform-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effekti: Kartochka ustiga olib borganingizda kengayadi */
+.uniform-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.uniform-item h3 {
+  font-size: 20px;
+  color: #002b80;
+  margin-bottom: 10px;
+}
+
+.uniform-item ul {
+  list-style: disc inside;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.uniform-item li {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.uniform-note {
+  background-color: #ffe9c6;
+  padding: 15px;
+  border-radius: 8px;
+  color: #804400;
+  font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .uniform-title {
+      font-size: 24px;
+  }
+
+  .uniform-description {
+      font-size: 14px;
+  }
+
+  .uniform-item h3 {
+      font-size: 18px;
+  }
+
+  .uniform-item li {
+      font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .uniform-title {
+      font-size: 20px;
+  }
+
+  .uniform-description {
+      font-size: 12px;
+  }
+
+  .uniform-item h3 {
+      font-size: 16px;
+  }
+
+  .uniform-item li {
+      font-size: 12px;
+  }
+}

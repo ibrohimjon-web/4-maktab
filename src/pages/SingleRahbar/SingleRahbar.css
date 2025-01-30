@@ -1,0 +1,154 @@
+/* Single Rahbar page CSS */
+.single-rahbar {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s forwards;
+}
+
+/* Animatsiya: Sahifa yuklanishida asta-sekin ko'rinishni oshirish */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.single-rahbar-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.single-rahbar-info {
+    max-width: 600px;
+}
+
+.single-rahbar-info h2 {
+    font-size: 32px;
+    color: #333;
+}
+
+.single-rahbar-info h3 {
+    font-size: 24px;
+    color: #ff5e00;
+    margin-bottom: 15px;
+}
+
+.single-rahbar-info p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Back button */
+.back-button {
+    background-color: #ff5e00;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e44d00;
+    transform: translateY(-3px); /* Tugma ko'tarilishi effekti */
+}
+
+/* Rahbarlar list styles */
+.leaders-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.leader {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader:hover {
+    transform: translateY(-5px); /* Hover effekti */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.leader img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.leader h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.leader p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .leaders-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .single-rahbar-info {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .single-rahbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .single-rahbar-image {
+        margin-bottom: 20px;
+    }
+
+    .single-rahbar-info h2 {
+        font-size: 28px;
+    }
+
+    .single-rahbar-info h3 {
+        font-size: 22px;
+    }
+
+    .single-rahbar-info p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .single-rahbar-info h2 {
+        font-size: 24px;
+    }
+
+    .single-rahbar-info h3 {
+        font-size: 20px;
+    }
+
+    .single-rahbar-info p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,80 @@
+/* Modalni butun ekran bo'ylab markazlashtirish */
+.intro-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 3, 3, 0.5); /* Yarmay yoritilgan fon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-content h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-content p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+  }
+  
+
+  .intro-d {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: darkblue;
+    text-decoration: none;
+    font-size: 29px;
+  }
+
+  .intro-d:hover {
+    color: blue;
+    text-decoration: underline;
+
+    /* Animation */
+    animation: bounce 2s infinite;
+  }
+
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .modal-content {
+      font-size: 24px;
+    }
+    
+    .intro-d {
+      font-size: 26px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .modal-content {
+      font-size: 20px;
+    }
+    
+    .intro-d {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .modal-content {
+      font-size: 18px;
+    }
+    
+    .intro-d {
+      font-size: 20px;
+    }
+  }
