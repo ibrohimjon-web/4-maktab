@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="home-wrapper">
       <div className="home-banner">
-        <h1 className="home-title">4-Maktabga Xush Kelibsiz!</h1>
+        <h1 className="home-title">4-Maktab Web sahifasiga Xush Kelibsiz!</h1>
         <p className="home-description">
           Bizning maktabimizda o‘quvchilar uchun eng yaxshi ta’lim sharoitlari yaratilgan. O‘quvchilarning
           intellektual va ijtimoiy rivojlanishiga katta e’tibor qaratiladi.
