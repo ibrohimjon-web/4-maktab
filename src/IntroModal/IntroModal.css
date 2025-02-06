@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(12, 3, 3, 0.5); /* Yarmay yoritilgan fon */
+    background-color: rgba(2, 1, 11, 0.885); /* Yarmay yoritilgan fon */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@
   }
   
   .modal-content {
-    background-color: white;
+    background-color: rgb(204, 206, 230);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -29,6 +29,12 @@
     margin-top: 10px;
     font-size: 18px;
     color: #555;
+  }
+
+  .greeting-text {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ffffff;
   }
   
 
@@ -46,6 +52,10 @@
 
     /* Animation */
     animation: bounce 2s infinite;
+  }
+
+  .logo-i {
+    width: 400px;
   }
 
   /* Media Queries */
@@ -67,6 +77,10 @@
     .intro-d {
       font-size: 22px;
     }
+
+    .logo-i {
+    width: 300px;
+  }
   }
 
   @media (max-width: 480px) {
@@ -77,4 +91,9 @@
     .intro-d {
       font-size: 20px;
     }
+
+    .logo-i {
+    width: 200px;
+  }
+
   }

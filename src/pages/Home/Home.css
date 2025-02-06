@@ -172,10 +172,11 @@
     gap: 20px;
   }
   .gallery-item {
-    width: 60%;
+    width: 80%;
   }
   .gallery-image {
     width: 100%;
+    height: auto;
   }
 }
 
